@@ -1,19 +1,25 @@
 {
-    "name": "stgbundle/cas-bundle",
+    "name": "jkober/cas-bundle",
     "type": "symfony-bundle",
-    "description": "Bundle de cas para symfony 6.*",
+    "description": "Bundle de cas para symfony 5.4",
     "homepage": "https://github.com/deimsantafe/stg-cas-bundle",
     "license": "MIT",
     "require": {
         "php": ">=8.1",
-	    "symfony/security-bundle": "6.4.*",
-        "symfony/dependency-injection": "6.4.*",
-        "symfony/routing": "6.4.*",
-        "apereo/phpcas": "^1.6"
+        "jasig/phpcas": "~1.4",
+	    "symfony/security-bundle": "~5.4",
+        "symfony/dependency-injection": "~5.4",
+        "symfony/routing": "~5.4"
     },
     "autoload": {
         "psr-4": { "Stg\\Bundle\\CasBundle\\": "" }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "codeception/aspect-mock": "*",
+        "phpunit/phpunit": "~7.5",
+        "symfony/debug": "~5.4",
+        "symfony/phpunit-bridge": "~5.4"
+    }
 }

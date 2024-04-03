@@ -67,6 +67,14 @@ class Configuration implements ConfigurationInterface
                     ->example('failure_path')
                     ->info('Url when login failure')
                 ->end()
+                ->arrayNode('firewalls_on')
+                    ->prototype('scalar')
+                        ->defaultValue([])
+                        ->example("['rc_stg_1','rc_stg_2']")
+                        ->info('Aca va la lista de firewalls donde escucha para hacer logout')
+                    ->end()
+                ->end()
+
             ->end();
 
         return $treeBuilder;

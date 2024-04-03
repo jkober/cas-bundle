@@ -35,8 +35,7 @@ class CasService
                 $this->getVersion(),
                 $this->getHostname(),
                 $this->getPort(),
-                $this->getUrl(),
-                $this->getServiceBaseUrl()
+                $this->getUrl()
             );
         }
 
@@ -92,6 +91,9 @@ class CasService
     {
         return $this->getParameter('hostname');
     }
+    public function getFirewall_on(){
+        return $this->getParameter("firewalls_on");
+    }
 
     public function getUri()
     {
@@ -117,7 +119,6 @@ class CasService
     {
         return $this->getParameter('service_base_url');
     }
-
     public function isRedirectingAfterLogout()
     {
         return trim($this->getParameter('logout_redirect')) !== '';
