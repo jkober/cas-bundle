@@ -35,7 +35,8 @@ class CasService
                 $this->getVersion(),
                 $this->getHostname(),
                 $this->getPort(),
-                $this->getUrl()
+                $this->getUrl(),
+                $this->getServiceBaseUrl()
             );
         }
 
